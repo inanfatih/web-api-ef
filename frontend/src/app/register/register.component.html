@@ -1,0 +1,23 @@
+<mat-card>
+  <form [formGroup]="form" (submit)="auth.register(form.value)">
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Email"
+        type="email"
+        formControlName="email"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Password"
+        type="password"
+        formControlName="password"
+      />
+    </mat-form-field>
+    <button mat-raised-button color="primary" [disabled]="!form.valid">
+      Register
+    </button>
+  </form>
+</mat-card>
